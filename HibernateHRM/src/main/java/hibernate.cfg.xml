@@ -1,0 +1,45 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM 
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+   <session-factory>
+   
+      <property name = "hibernate.dialect">
+         org.hibernate.dialect.MySQLDialect
+      </property>
+      
+      <property name = "hibernate.connection.driver_class">
+         com.mysql.cj.jdbc.Driver
+      </property>
+      
+      <!-- Assume HibernateHRM is the database name -->
+      
+      <property name = "hibernate.connection.url">
+         jdbc:mysql://localhost:3306/HibernateHRM
+      </property>
+      
+      <property name = "hibernate.connection.username">
+         root
+      </property>
+      
+      <property name = "hibernate.connection.password">
+         root
+      </property>
+      
+      <property name = "hibernate.hbm2ddl.auto">
+        update
+      </property>
+      
+        <property name = "hibernate.show_sql">
+         true
+      </property>
+      
+      <!-- List of POJO Classes files -->
+      <mapping class = "com.csi.model.Employee"/>
+      
+      
+      
+   </session-factory>
+</hibernate-configuration>
+
+
